@@ -1,0 +1,20 @@
+model: 'eegnet' #
+
+device: 'cuda:1' # 'cpu' 'cuda:0'
+n_batch: 128
+n_epoch: 300
+n_kfolds: 5
+noise_level: 0.0
+drop_rate: 0.25
+
+
+n_rules: 50
+lr: 0.0001
+
+dataset_folder: '06_Aware0_IB1_modality_SR_chan' # each kind of dataset has a same prefix name, dataset is the prefix
+dataset_list:
+  ['p1_chan_SR_A_shuffle', 'p1_chan_SR_V_shuffle', 'p1_chan_SR_VA_shuffle']
+#['p1_chan_SR_A_shuffle', 'p1_chan_SR_V_shuffle', 'p1_chan_SR_VA_shuffle'] #getlost_cut_cls42. getlost_short_cls42, mix_short_regression, getlsot_short_sort_reg, getlost_short_mean_norm_a1_cls
+# ['p2_chan_SR_A', 'p2_chan_SR_V', 'p2_chan_SR_VA']
+#logger
+log_to_file: 'true' # 'false' 'tru
